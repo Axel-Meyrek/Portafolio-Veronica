@@ -1,0 +1,231 @@
+/* BARRA DE NAVEGACIÓN */
+@media (max-width:1000px) {
+    .nav{
+        justify-content: space-between;
+        padding: .5em 1em;
+    }
+    .nav_item{
+        display: none;
+    }
+    .conteinerMenu{
+        display: block;
+    }
+}
+/* FIN DE LA BARRA DE NAVEGACIÓN */
+
+
+
+/* PERFIL */
+@media (max-width: 1330px) {
+    .perfil_section{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    .sobremi_habilidades{
+        gap: 50px;
+        padding: 50px 0;
+    }
+
+    .section_botones{
+        width: 600px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        /* padding: 50px 0; */
+    }
+    .botones_item{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width:1000px) {
+    .perfil_section{
+        padding: 30px;
+    }
+}
+
+@media (max-width: 680px) {
+    .perfil{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .sobremi_perfil{
+        align-items: center;
+    }
+    .sobremi_habilidades{
+        display: none;
+    }
+
+    .section_botones{
+        flex-direction: column;
+        width: 95%;
+    }
+    .perfil_puesto{
+        text-align: center  ;
+    }
+}
+
+/* FIN DEL PERFIL */
+
+
+
+/* SOBRE MI */
+@media (max-width:900px) {
+    .sobremi{
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+    .sobremi_title{
+        text-align: center;
+    }
+    
+    .sobremi .container_img{
+        order: -1;
+    }
+}
+/* FIN DE LA SECTION SOBRE MI */
+
+
+/* EXPERIENCIA LABORAL */
+@media (max-width: 1235px) {
+    .tarjet{
+        width: 450px;
+    }
+}
+@media (max-width:1035px) {
+    .tarjet{
+        width: 100%;
+    }
+}
+@media (max-width: 900px) {
+    .experiencia_title{
+        text-align: center;
+    }
+}
+/* FIN DE LA EXPERIENCIA LABORAL */
+
+/* HABILIDADES */
+@media (max-width: 900px) {
+    .habilidades_title{
+        text-align: center;
+    }
+}
+@media (max-width: 700px) {
+    .habilidades{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .tecnicas{
+        width: 100%;
+    }
+    .laborales{
+        width: 100%;
+    }
+}
+/* FIN DE LAS HABILIDAES */
+
+
+
+
+/* GALERIA */
+
+@media (max-width:1235px) {
+    .galeria_item{
+        width: 500px;
+    }
+}
+@media (max-width: 1145px) {
+    .galeria_item{
+        width: 45%;
+    }
+}
+
+@media (max-width:900px) {
+    .galeria_title{
+        text-align: center;
+    }
+}
+@media (max-width:700px) {
+    .galeria_item{
+        width: 100%
+    }
+}
+
+/* FIN DE LA GALERIA */
+
+/* CERTIFICADOS------------------------- */
+@media (max-width: 1235px) {
+    .certificado_container{
+        width: 500px;
+    }
+}
+@media (max-width: 1140px) {
+    .certificado_container{
+        width: 45%;
+    }
+}
+@media (max-width: 900px) {
+    .certificados_title{
+        text-align: center;
+    }
+    .certificados{
+        justify-content: center;
+    }
+}
+@media (max-width: 700px) {
+    .certificado_container{
+        width: 100%;
+    }
+}
+
+
+/* SECTION CONTACTO */
+@media (max-width: 1200px) {
+    .contacto{
+        flex-direction: column;
+    }
+    .contacto_title{
+        text-align: center;
+    }
+    .formulario{
+        width: 400px;
+        margin: auto;
+    }
+    .img_contacto{
+        width: 400px;
+        margin: auto;
+    }
+    .button{
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .img_contacto{
+        width: 100%;
+    }
+    .formulario{
+        width: 100%;
+    }
+}
+/* FIN DE LA SECTION CONTACTO */
+
+
+/* NORMALIZACION */
+@media (max-width:500px) {
+    html{
+        font-size: 15px;
+    }
+
+    .sobremi_description{
+        width: 100%;
+    }
+}
+/* FIN DE LA NORMALIZACIÓN */

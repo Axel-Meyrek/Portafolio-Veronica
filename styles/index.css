@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+/* 300 500 600 700 */
+/* font-family: 'Poppins', sans-serif; */
+
+
+
+/* NORMALIZACIÓN PRINCIPAL --------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    transition-property: transform, scale, color, background-color, opacity;
+    transition-duration: .5s;
+}
+
+
+
+/* ESTILOS--------------------------------------------------------- */
+:root{
+
+    /* COLORES */
+    --white: #FFFFFF;
+    --text_color: #000000;
+    --color_primary: #464646;
+    --background: #ffffff;
+    
+    /* GROSOR LETRA */
+    --light: 300;
+    --medium: 500;
+    --bold: 700;
+
+    /* TAMAÑO DE LETRA */
+    --texts: 1rem;
+    --title: 1.5rem;
+    --subtitle:2em;
+
+    /* BOX SHADOW */
+    --sombra: 0 0 10px rgba(0, 0, 0, 0.250);
+
+}
+
+.modDark{
+    --white: #000000;
+    --text_color: #ffffff;
+    --color_primary: #464646;
+    --background: #1d1c23;
+    --color_primary: #c5bbbb;
+}
+/* NORMALIZACION DE ELEMENTOS----------------------------------------- */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--background);
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    
+}
+.container_img{
+    max-width: 800px;
+    width: 600px;
+}
+.container_img img{
+    width: 100%;
+}
+
+button{
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text_color);
+}
+
+h2{
+    color: var(--text_color);
+}
+
+/* VENTANA FLOTANTE ----------------------------------------------- */
+.ventanaFlotanteMenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    background-color: var(--background);
+    transform: translateY(-100%);
+}
+
+.ventanaFlotante--active{
+    transform: translateY(0);
+}
+.conteinerPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 1em;
+    padding-top: 100px;
+}
+
+
+.menu_item{
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--color_primary);
+    border-radius: 5px;
+    padding: 1em 0;
+    color: var(--text_color);
+    font-size: var(--texts);
+    max-width: 500px;
+    box-shadow: var(--sombra);
+}
+
+/* INICIO DE LA BARRA DE NAVEGACIÓN--------------------------------- */
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    box-shadow: var(--sombra);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    background-color: var(--background);
+    z-index: 10;
+}
+.nav_item{
+    color: var(--text_color);
+    font-weight: var(--light);
+    margin-right: 2em;
+    padding: 5px;
+    border-bottom: 1px solid var(--background);
+    transition: border-buttom, .9s;
+
+}
+.nav_item:hover{
+    border-color: var(--text_color);
+}
+
+.conteinerMenu{
+    display: none;
+}
+
+/* SECTION PERFIL----------------------------------------------- */
+.perfil_section{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+.perfil{
+    display: flex;
+    margin-bottom: 10px;
+    width: 600px;
+}
+.foto_perfil img{
+    height: 180px;
+    border-radius: 100%;
+    margin-right: 1em;
+
+    box-shadow: var(--sombra);
+}
+.sobremi_perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.perfil_name{
+    color: var(--text_color);
+    font-weight: var(--medium);
+    font-size: var(--subtitle);
+    text-align: center;
+}
+.perfil_puesto{
+    color: var(--text_color);
+    font-weight: var(--light);
+    font-size: var(--texts);
+    margin-bottom: 10px;
+    
+}
+
+
+
+
+
+/* REDES---------------------------------------- */
+.redes_item{
+    color: var(--text_color);
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+
+/* BOTONES-------------------------------------------- */
+.section_botones{
+    display: flex;
+    gap: 30px;
+}
+.botones_item{
+    padding: .8em 2.5em;
+    display: inline-block;
+    background-color: var(--color_primary);
+    border-radius: 10px;
+    color: var(--white);
+    border: 1px solid var(--color_primary);
+}
+.botones_item:hover{
+    color: var(--text_color);
+    background-color: var(--background);
+    border: 1px solid var(--text_color);
+}
+.botones_item--white{
+    color: var(--text_color);
+    border: 1px solid var(--text_color);
+    background-color: var(--background);
+}
+.botones_item--white:hover{
+    border: 1px solid var(--text_color);
+    background-color: var(--color_primary);
+    color: var(--white);
+}
+
+
+/* HABILIDADES--------------------------------------------- */
+.sobremi_habilidades{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+.sobremi_habilidades_section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+.sobremi_habilidades_item{
+    text-align: center;
+    width: 180px;
+    font-weight: var(--light);
+    line-height: 1.8;
+    color: var(--text_color);
+}
+
+
+/* SECTION SOBRE MI -------------------------------------------*/
+.sobremi{
+    display: flex;
+}
+.sobremi_description{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.sobremi_title{
+    font-size: var(--title);
+    color: var(--text_color);
+}
+.sobremi_text{
+    color: var(--text_color);
+    font-weight: var(--light);
+    line-height: 2;
+}
+.sobremi .container_img{
+    color: var(--color_primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* EXPERIENCIA LABORAL---------------------------------------------------- */
+.experiencia_title{
+    font-size: var(--title);
+    font-weight: var(--bold);
+    margin-bottom: 50px;
+}
+.tarjetero{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.tarjet{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border: 1px solid var(--color_primary);
+    border-radius: 30px;
+    gap: 10px;
+
+    box-shadow: var(--sombra);
+}
+.tarjet_title{
+    font-size: var(--texts);
+    font-weight: var(--medium);
+    text-align: center;
+    color: var(--text_color);
+}
+.tarjet_text{
+    font-weight: var(--light);
+    color: var(--text_color);
+}
+
+
+/* SECTION HABILIDADES -----------------------------------------------------*/
+.habilidades{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.habilidades_title{
+    color: var(--text_color);
+    font-size: var(--title);
+    font-weight: var(--bold);
+}
+.barra_progreso{
+    height: 15px;
+    background-color: var(--color_primary);
+    width: 100%;
+    border-radius: 5px;
+}
+.tecnicas{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.laborales{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.tecnicas_title{
+    color: var(--text_color);
+    font-weight: var(--light);
+    font-size: var(--texts);
+}
+.laborales_title{
+    color: var(--text_color);
+    font-weight: var(--light);
+    font-size: var(--texts);
+}
+
+
+
+/* GALERIA-------------------------------------------------------- */
+.galeria_title{
+    font-size: var(--title);
+    margin-bottom: 50px;
+    font-weight: var(--bold);
+}
+.contenedor_img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+.galeria_item{
+    width: 350px;
+    box-shadow: var(--sombra);
+}
+
+
+/* CERTIFICADOS-------------------------------- */
+.certificados_title{
+    font-size: var(--title);
+    font-weight: var(--bold);
+    color: var(--text_color);
+    margin-bottom: 50px;
+}
+.certificados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.certificado_container{
+    position: relative;
+    width: 350px;
+    border: 1px solid var(--color_primary);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    overflow: hidden;
+}
+.certificado_item{
+    width: 100%;
+}
+.overlay{
+    position: absolute;
+    background-color: #464646f6;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    padding: 1em;
+}
+.certificado_container:hover .overlay{
+    opacity: 1;
+}
+.overlay_title{
+    color: white;
+    font-weight: var(--bold);
+    font-size: var(--texts);
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    
+}
+.overlay_icon{
+    color: white;
+    font-size: var(--subtitle);
+}
+.overlay_school{
+    color: white;
+    text-align: center;
+    font-weight: var(--light);
+    font-size: 1rem
+}
+
+
+
+/* SECTION CONTACTAME------------------------------------------------ */
+.contacto_title{
+    color: var(--text_color);
+    font-weight: var(--bold);
+    font-size: var(--title);
+    margin-bottom: 50px;
+}
+.contacto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+.img_contacto{
+    width: 800px;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 600px;
+    gap: 20px;
+}
+::placeholder{
+    font-weight: var(--medium);
+    color: var(--text_color);
+    font-size: var(--texts);
+    font-family: 'Poppins', sans-serif;
+}
+.formulario_item{
+    height: 50px;
+    border-radius: 10px;
+    padding: .5em;
+    
+    background-color: var(--background);
+    border: 2px solid var(--color_primary);
+    
+    font-weight: var(--medium);
+    color: var(--text_color);
+    font-size: var(--texts);
+    font-family: 'Poppins', sans-serif;
+    
+}
+.box_mensaje{
+    height: 200px;
+}
+.button{
+    background-color: var(--color_primary);
+    color: var(--white);
+    width: 200px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: var(--background);
+    color: var(--text_color);
+}
+
+
+
+/* FOOTER---------------------------------------------------- */
+.footer{
+    background-color: var(--color_primary);
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer_redes{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+.footer_redes_item{
+    color: var(--white);
+    font-size: 2rem
+}
+.footer_credits{
+    color: var(--white);
+    font-weight: var(--medium);
+    text-align: center;
+}
